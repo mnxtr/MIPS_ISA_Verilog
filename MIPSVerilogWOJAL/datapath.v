@@ -44,7 +44,8 @@ mux2 #(32) jumpmux(PCBranch, {PCplus4[31:28],Instr[25:0],2'b00 }, Jump,PCNext);
 // Register File 
 
 registerfile32 RF(clk,RegWrite, reset, Instr[25:21], Instr[20:16], writereg, MUXresult, dataone,datatwo); 
-mux2 #(5) writeopmux(Instr[20:16],Instr[15:11],RegDst, writereg);
+mux2 #(31) jalmux(5'b11111,Instr[15:11],jal, Writeopmux);
+mux2 #(5) writeopmux(Instr[20:16],Writeopmux,RegDst, writereg);
 mux2 #(32) resultmux(ALUResult, ReadData, MemtoReg,MUXresult);
 
 // ALU
