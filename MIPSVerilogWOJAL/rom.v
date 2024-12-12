@@ -16,7 +16,7 @@ output [width-1:0] dout;
 reg [width-1:0] Imem[depth-1:0];
     
 initial
-    $readmemh("memfile4.txt", Imem);
+    $readmemh("memfile.txt", Imem);
     
   assign dout= Imem[adr/4]; 
 

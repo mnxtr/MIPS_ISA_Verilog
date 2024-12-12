@@ -43,6 +43,10 @@ always @(*) begin
                     6'b000100: ALUControl <= 4'b1011;    // SLLV
                     6'b000110: ALUControl <= 4'b1100;    // SRLV
                     6'b000111: ALUControl <= 4'b1101;    // SRAV
+                    6'b001000: begin // JR
+                        ALUControl <= 4'b0000; // No ALU operation needed, just jump to address in $ra
+                        Jump <= 1; // JR will trigger a jump
+                     end
                 endcase
 
             end
@@ -106,6 +110,10 @@ always @(*) begin
                         temp <= 8'b00000010;  
                         ALUControl <= 4'b0010; 
                     end 
+        6'b000011: begin // JAL
+            temp <= 8'b10000010;
+            ALUControl <= 4'b0010;
+                    end
                         
         6'b001111:  begin                         // LUI
                         temp <= 8'b10100000;  
