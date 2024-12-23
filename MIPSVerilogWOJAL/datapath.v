@@ -1,3 +1,38 @@
+// Datapath Module
+// This module represents the datapath of a MIPS processor. It includes the program counter (PC),
+// arithmetic logic unit (ALU), register file, and various multiplexers and adders to handle
+// instruction execution and data flow.
+
+// Inputs:
+// - clk: Clock signal
+// - reset: Reset signal
+// - RegDst: Control signal to select the destination register
+// - RegWrite: Control signal to enable writing to the register file
+// - ALUSrc: Control signal to select the second ALU operand
+// - Jump: Control signal to handle jump instructions
+// - MemtoReg: Control signal to select the data to write back to the register file
+// - PCSrc: Control signal to select the next PC value
+// - ALUControl: Control signal to specify the ALU operation
+// - ReadData: Data read from memory
+// - Instr: Instruction fetched from memory
+
+// Outputs:
+// - PC: Current program counter value
+// - ZeroFlag: Zero flag from the ALU indicating if the result is zero
+// - datatwo: Data read from the second register
+// - ALUResult: Result from the ALU operation
+
+// Internal Wires:
+// - PCNext: Next value of the program counter
+// - PCplus4: Program counter incremented by 4
+// - PCbeforeBranch: Program counter before branch
+// - PCBranch: Program counter after branch
+// - extendedimm: Sign-extended immediate value
+// - extendedimmafter: Shifted immediate value after sign extension
+// - MUXresult: Result from the memory or ALU to be written back to the register file
+// - dataone: Data read from the first register
+// - aluop2: Second operand for the ALU
+// - writereg: Destination register address
 // file: Datapath.v
 
 

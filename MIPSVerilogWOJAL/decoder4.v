@@ -1,5 +1,22 @@
 // file: decoder4.v
 
+// This module implements a 4-to-16 decoder. It takes a 4-bit input 'a' and 
+// produces a 16-bit output 'y'. The output 'y' is a one-hot encoded signal 
+// where only one bit is set to '1' based on the value of the input 'a'.
+// 
+// Inputs:
+//   - a: 4-bit input signal
+//
+// Outputs:
+//   - y: 16-bit one-hot encoded output signal
+//
+// The module uses an always block that is sensitive to any changes in the 
+// input 'a'. Inside the always block, a series of if-else statements are 
+// used to determine which bit of the output 'y' should be set to '1' based 
+// on the value of 'a'. For example, if 'a' is 4'b0000, then 'y' will be 
+// 16'b0000000000000001, and if 'a' is 4'b1111, then 'y' will be 
+// 16'b1000000000000000.
+
 
 `timescale 1ns/1ns
 
