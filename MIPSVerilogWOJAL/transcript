@@ -1,0 +1,12 @@
+vlog -work {C:/Users/USER/Downloads/New folder/work} -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:54:49 on Dec 23,2024
+# vlog -reportprogress 300 -work C:/Users/USER/Downloads/New folder/work -refresh -force_refresh 
+# End time: 21:54:49 on Dec 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work {C:/Users/USER/Downloads/New folder/work} -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:54:49 on Dec 23,2024
+# vcom -reportprogress 300 -work C:/Users/USER/Downloads/New folder/work -refresh -force_refresh 
+# End time: 21:54:49 on Dec 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
